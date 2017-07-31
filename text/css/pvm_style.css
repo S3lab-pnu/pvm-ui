@@ -1,0 +1,365 @@
+body, button, div, p {
+	font-family: 'Apple SD Gothic Neo', 나눔고딕, 'Trebuchet MS', Sans-Serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 95vh;
+    width: 99vw;
+}
+
+header {
+    height: 40px;
+    margin: 0px;
+}
+
+section {
+    background-color: #E7E7E7
+}
+
+section.summary {
+    height: 150px;
+    background-color: white;
+    border-top: 10px solid #E7E7E7;
+    border-right: 10px solid #E7E7E7;
+    border-bottom: 0px solid #E7E7E7;
+    border-left: 10px solid #E7E7E7;
+}
+
+section.static_menu {
+    height: 150px;
+    border-top: px solid #E7E7E7;
+    border-right: 10px solid #E7E7E7;
+    border-bottom: 0px solid #E7E7E7;
+    border-left: 10px solid #E7E7E7;
+    position:relative;
+}
+
+section.display_method_menu {
+    height: auto;
+    border-top: px solid #E7E7E7;
+    border-right: 10px solid #E7E7E7;
+    border-bottom: 0px solid #E7E7E7;
+    border-left: 10px solid #E7E7E7;
+    position:relative;
+}
+
+section.dynamic_menu {
+    height: auto;
+    width: 310px;
+    max-height: 50%;
+    overflow-y: scroll;
+    border-top: 10px solid #E7E7E7;
+    border-right: 1px solid #E7E7E7;
+    border-bottom: 0px solid #E7E7E7;
+    border-left: 10px solid #E7E7E7;
+    background-color: white;
+
+}
+
+div.summary {
+    width: inherit;
+    height: 111px;
+    overflow-y: scroll;
+}
+
+div.attr_name {
+    background-color: #333A56;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    border: none;
+    text-indent: 10px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+button.display_method {
+    background-color:#D0D0D0;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 0px 5px 0px;
+    margin: 0px;
+    border:0px;
+    width: 49%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.display_method.active {
+    background-color: #52658f;
+    color: #FFF
+}
+
+button.display_method:hover {
+    background-color: #aaa;
+}
+
+button.search_method {
+    background-color:#D0D0D0;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 0px 5px 0px;
+    margin: 0px;
+    border:0px;
+    width: 49%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.search_method.active {
+    background-color: #52658f;
+    color: #FFF
+}
+
+button.search_method:hover {
+    background-color: #aaa;
+}
+
+button.accordion {
+    background-color: #52658f;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion:hover {
+    background-color: #E8E8E8;
+}
+
+button.accordion.active {
+	background-color: #333A56;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #bbb;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+input.search_button {
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    border-top: 10px solid #E7E7E7;
+    border-right: 10px solid #E7E7E7;
+    border-bottom: 0px solid #E7E7E7;
+    border-left: 10px solid #E7E7E7;
+    outline: none;
+    position: relative;
+    bottom: 0px;
+    float: center;
+    left: 50px;
+}
+
+input.search_button:hover {
+}
+
+div.panel {
+    padding: 0px;
+    background-color: #E8E8E8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin: 0;
+}
+
+p.value_input {
+    width: 80%;
+}
+
+p.slider_wrapper {
+    position: relative;
+    left: 50%;
+}
+
+p.sum_sub_t {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    text-indent: 10px;
+    font-size: 13px;
+}
+
+p.sum_attr {
+    padding: 0;
+    margin: 0;
+    text-indent: 30px;
+    font-size: 13px;
+}
+
+div.selected_attribute {
+    background-color: #329129;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    border: none;
+    text-indent: 10px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+div.attr_panel {
+	padding-bottom: 4px;
+    border-bottom: 1px;
+    border-bottom-color: #bbb;
+    border-bottom-style: solid;
+    margin: 0px;
+    text-indent: 15px;
+    font-size: 13px;
+}
+
+div.weight_panel {
+    padding-top: 10px;
+	padding-bottom: 10px;
+    border-bottom: 1px;
+    border-bottom-color: #bbb;
+    border-bottom-style: solid;
+    margin: 0px;
+    text-indent: 15px;
+    font-size: 13px;
+}
+
+a.percent {
+    padding: 0px;
+    margin-right: 5px;
+    float: right;
+}
+
+input.input_text {
+    width: 35px;
+}
+
+input.weight_input {
+    float: right;
+    width: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#side {
+    float: right;
+    width: 330px;
+    height: inherit;
+    position: relative;
+}
+
+#p2_only_method {
+    float: left;
+}
+
+#use_attr_metohd {
+    float: right;
+}
+
+#map {
+    height: inherit;
+    width: auto;
+}
+
+#legend {
+    width: 300px;
+    height: auto;
+    border-top: 10px solid #E7E7E7;
+    border-right: 10px solid #E7E7E7;
+    border-bottom: 0px solid #E7E7E7;
+    border-left: 10px solid #E7E7E7;
+
+}
+
+#title {
+    width: 300px;
+    height: auto;
+
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+
+    width: 100%; /* 원하는 너비설정 */
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: inherit;  /* 폰트 상속 */
+    background: url('../../img/select_point.jpg') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+    border: 1px solid #999;
+    border-radius: 0px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #E8E8E8
+}
+
+pre {
+    padding: 0px;
+    margin: 0px;
+}
+
+a.input {
+    float: right;
+    padding-right: 10px;
+}
+
+.wrap-loading{ /*화면 전체를 어둡게 합니다.*/
+
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background: rgba(0,0,0,0.2); /*not in ie */
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');    /* ie */
+}
+
+.wrap-loading div{ /*로딩 이미지*/
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left: -21px;
+    margin-top: -21px;
+}
+
+.display-none{ /*감추기*/
+    display:none;
+}
+
+p.attr_class {
+    background-color: #E7E7E7;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-indent: 3px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+a.attr_name {
+    color: firebrick;
+}
+
+a.attr_value {
+    color:dodgerblue;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Property Value Map</title>
+        <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+        <script src='https://maps.googleapis.com/maps/api/js?key=your_google_map_api.key'></script>
+        <script src='../js/nouislider.js'></script>
+        <script src='../js/value_map.js'></script>
+        <script src='../js/value_map_ui.js'></script>
+        <script src='../js/value_search.js'></script>
+        <link rel='stylesheet' href='../css/pvm_style.css'/>
+        <link rel='stylesheet' href='../css/nouislider.css'/>
+    </head>
+    
+    <body>
+        <section id="side">
+            <section class='legend'>
+                <img id='legend' src='../../img/value_legend.png' align='center'>
+            </section>
+            
+            <section class='summary' id='summary_section'>
+                <div class='selected_attribute'> 분석 정보 </div>
+                <div class='summary' id='summary_div'></div>
+            </section>
+            
+            <section class='static_menu' id='static_section'>
+                <div class='attr_name'> 시각화 방법 </div>
+                
+                <button class='search_method' id='value_method' value='show_value' onclick='change_method(this)'> Value </button>
+                
+                <button class='search_method' id='diff_method' value='show_diff' onclick='change_method(this)'> Diff </button>
+                
+                <div class='attr_name'> 표시 방식 </div>
+                <button class='display_method' id='complex_display' value='complex' onclick='change_display(this)'> 단지 단위 </button>
+                
+                <button class='display_method' id='building_display' type='radio'value='building' onclick='change_display(this)'> 동 단위 </button>
+            </section>
+            
+            <section class='static_menu' id='static_section'>
+                <div class='attr_name'> 대상 지역 </div>
+                <select id='city_select'>
+                </select>
+                
+                <div class='attr_name'> 학습 모델 </div>
+                <select id='analysis_model'>
+                </select>
+            </section>
+            
+            <section class='dynamic_menu' id='dynamic_section' style="overflow-y:hidden" >
+            </section>
+            
+        <input type='image' src='../../img/search_button.png' class='search_button' style=" top: 75px" onclick='click_search()'>
+            
+        </section>
+
+        <section id='map'></section>
+        
+        <div class="wrap-loading display-none">
+            <div><img src="../../img/loading.gif" height="50" width="50"/></div>
+        </div>
+    </body>
+</html>
